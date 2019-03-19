@@ -29,10 +29,16 @@ public class Board {
 	
 	public Piece piece(int row, int column) {
 		return this.pieces[row][column];
-		
 	}
+	
 	public Piece piece(Position pos) {
 		return this.pieces[pos.getRow()][pos.getColumn()];
+		
+	}
+	
+	public void placePiece (Piece piece, Position pos) {
+		pieces[pos.getRow()][pos.getColumn()] = piece;
+		piece.position = pos;
 		
 	}
 
